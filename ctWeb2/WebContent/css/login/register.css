@@ -1,0 +1,11 @@
+.text-box-width {
+	width: 300px;
+}
+
+.form-control {
+	display: inline;
+}
+
+.input-warning {
+	color: red;
+}

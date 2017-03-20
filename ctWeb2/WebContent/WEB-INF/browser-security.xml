@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:sec="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+   <!-- global-method-security secured-annotations="enabled"
+      access-decision-manager-ref="accessDecisionManager" / -->
+      
+   <sec:http pattern="/css/**" security="none"/>
+   
+   <!-- http pattern="/LogoutJsp.jsp" security="none"/>
+   <http pattern="/jsp/LogoutJsp.jsp" security="none"/ -->
+   <!-- http pattern="/views/login2.jsp*" security="none"/ -->
+   
+   <context:component-scan base-package="com.outlands.cooltalk.web"/>
+ 
+   <sec:global-method-security secured-annotations="enabled"/>
+
+   <!-- URL security is always declared here.  No annotations in controllers. -->
+   <!-- Catch everything but login.  This includes logout if URL is attempted again. -->
+   <sec:http auto-config="true">
+<!--       <sec:intercept-url pattern="/browser/login*" access="ROLE_USER,ROLE_ANONYMOUS,ROLE_GUEST"  -->
+<!--           requires-channel="http" /> -->
+            
+<!--       <sec:intercept-url pattern="/browser/sections*" access="ROLE_USER"  -->
+<!--           requires-channel="http" /> -->
+            
+<!--       <sec:intercept-url pattern="/browser/sections/add*" access="ROLE_ADMIN"  -->
+<!--           requires-channel="http" /> -->
+            
+<!--       <sec:intercept-url pattern="/browser/sections/rename/**" access="ROLE_ADMIN"  -->
+<!--           requires-channel="http" /> -->
+            
+<!--       <sec:intercept-url pattern="/browser/discussions/**" access="ROLE_USER"  -->
+<!--           requires-channel="http" /> -->
+            
+<!--       <sec:intercept-url pattern="/browser/messageList/**" access="ROLE_USER"  -->
+<!--           requires-channel="http" /> -->
+            
+      <sec:anonymous username="guest" granted-authority="ROLE_GUEST" />
+      
+      <sec:form-login login-page="/login.do" default-target-url="/sections/sections" 
+      		authentication-failure-url="/login.do"/>
+      
+      <!-- Logout service does not work if servlet is not set to / mapping. -->
+      <!-- 	
+      <logout logout-success-url="/jsp/LogoutJsp.jsp" />
+      -->		
+      		
+   </sec:http>
+   
+   <sec:authentication-manager>
+      <sec:authentication-provider ref="AuthProv" />
+   </sec:authentication-manager>
+
+</beans:beans>

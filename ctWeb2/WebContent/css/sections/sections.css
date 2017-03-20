@@ -1,0 +1,22 @@
+.text-box-width {
+	width: 300px;
+}
+
+.input-warning {
+	color: red;
+}
+
+.form-control {
+	display: inline;
+}
+
+@media (min-width: 768px) {
+	.dialog-small {
+	    width: 400px;
+	}
+}
+
+.admin-edit {
+	color: green;
+	font-size: 10px;
+}

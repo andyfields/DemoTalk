@@ -1,0 +1,15 @@
+<div id="LeftNav">
+
+<div class="LeftNavEntry">
+<a href="/cooltalk2/browser/sections">Sections</a>
+</div>
+<div class="LeftNavEntry">
+<a href="#">New Messages</a>
+</div>
+<div class="LeftNavEntry">
+<a href="#">Subscriptions</a>
+</div>
+
+
+</div>
+

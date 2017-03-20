@@ -1,0 +1,82 @@
+.bgimage {
+  background-image: url('../../images/GrandTetonsCropped.jpg');
+  background-position: center bottom;
+  background-size: 100% 100%;
+  height: 200px;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0px;
+}
+
+.ctblue {
+	background-color: #38c8e0;
+}
+
+.ctinline {
+	display: inline;
+}
+
+.panel {
+    border: 0;
+}
+
+.margin-top-none {
+    margin-top: 0px;
+}
+
+.margin-top-5 {
+	margin-top: 5px;
+}
+
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.margin-top-15 {
+	margin-top: 15px;
+}
+
+.margin-left-15 {
+	margin-left: 15px;
+}
+
+.margin-bottom-none {
+	margin-bottom: 0px;
+}
+
+.padding-top-none {
+	padding-top: 0px;
+}
+
+.padding-left-45 {
+	padding-left: 45px;
+}
+
+.ctalign-top {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+
+.alert-style {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 300px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.button-padding {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.modal-radius {
+	border-radius: 3px;
+}
+
+.admin-link-font {
+	color: green;
+	font-size: 12px;
+}

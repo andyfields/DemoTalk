@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- !DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" -->
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <!-- session-factory name="" -->
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <!--  Following is for direct connect.  Not used for Tomcat datasource. -->
+  <property name="hibernate.connection.url">jdbc:mysql://localhost/ctdev</property>
+  
+  <!-- The following is for datasource.
+  <property name="hibernate.connection.datasource">java:/comp/env/jdbc/MySQLCt</property>
+   -->
+  
+  <!-- Following not allowed by Tomcat.  Supply username and password in DataSource specification -->
+  <property name="hibernate.connection.username">ctadmin</property>
+  <property name="hibernate.connection.password">ctadmin</property>
+  
+  <property name="hibernate.connection.pool_size">10</property>
+  <property name="hibernate.connection.isolation">4</property>
+  <property name="show_sql">true</property>
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  
+  <!-- Mapping files  -->
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TUserx"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TDiscussion"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TDisplayName"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TLastMessageRead"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TMessage"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TMessageSection"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TPcidCookie"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TReadBy"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TSuspensionDetail"/>
+  <mapping class="com.outlands.cooltalk.ctDatabase.entity.TBlockedUser"/>
+ </session-factory>
+</hibernate-configuration>
